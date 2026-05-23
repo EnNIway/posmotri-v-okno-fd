@@ -9,11 +9,15 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
-  block-size: 100%;
+  min-block-size: 100vh;
   margin: auto;
+  padding: 133px 30px;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -47,15 +51,7 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
-}
-
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-block-size: 100vh;
-  padding: 133px 30px;
+  background-color: #d9d9d9;
 }
 
 .content {
@@ -112,12 +108,7 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
-.search-form__label:has(.search-form__checkbox:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -165,12 +156,12 @@ ol {
   opacity: 0;
 }
 
-.search-form__checkbox:checked
-+ .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
 .button {
+  min-block-size: 34px;
   border: 1px solid #fff;
   padding: 0;
   color: #fff;
@@ -200,7 +191,6 @@ ol {
 
 .search-form__submit-button {
   min-inline-size: 194px;
-  min-block-size: 34px;
   align-self: flex-end;
 }
 
@@ -208,7 +198,6 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  block-size: 534px;
   flex-grow: 1;
 }
 
@@ -274,16 +263,19 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  padding-inline-end: 6px;
 }
 
 .content__video-card-title {
+  margin-block-end: 4px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  inline-size: 100%;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   text-transform: uppercase;
 }
 
@@ -305,7 +297,6 @@ ol {
 
 .more-button {
   inline-size: 100%;
-  min-block-size: 34px;
   margin-block-start: 30px;
 }
 
