@@ -263,15 +263,16 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  min-inline-size: 0;
   padding-inline-end: 6px;
 }
 
 .content__video-card-title {
+  max-inline-size: 200px;
   margin-block-end: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  inline-size: 100%;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
