@@ -197,8 +197,8 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-grow: 1;
+  gap: 26px;
 }
 
 .title {
